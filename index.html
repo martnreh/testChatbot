@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat Bubble Embed</title>
-  <script type="module">
-    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
-
-    Chatbox.initBubble({
-      agentId: 'clsvvnove005to98is8v3f2vx',
-      
-      // optional 
-      // If provided will create a contact for the user and link it to the conversation
-      contact: {
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'customer@email.com',
-        phoneNumber: '+33612345644',
-        userId: '42424242',
-      },
-      // optional
-      // Override initial messages
-      initialMessages: [
-        'Hello Georges how are you doing today?',
-        'How can I help you ?',
-      ],
-      // optional
-      // Provided context will be appended to the Agent system prompt
-      context: "The user you are talking to is John. Start by Greeting him by his name.",
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage Title</title>
+    <style>
+        /* Add CSS styles here */
+        .big-image {
+            max-width: 50%; /* Adjust the width as needed */
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Add some margin to the right for spacing */
+        }
+    </style>
 </head>
 <body>
-  <!-- Your webpage content goes here -->
+    <!-- Add your big image here -->
+    <img src="https://media.licdn.com/dms/image/C5603AQEKJZOIuFtOcg/profile-displayphoto-shrink_200_200/0/1655618431279?e=2147483647&v=beta&t=BFOpYGV6X2GYRFiutHKpmTyNxE7oVhNegoKhPZNyQ5U" alt="Big Image" class="big-image">
+
+    <!-- Embed the Agent as a Chat Bubble -->
+    <script type="module">
+      import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+
+      Chatbox.initBubble({
+        agentId: 'clsvvnove005to98is8v3f2vx',
+        
+        // optional 
+        // If provided will create a contact for the user and link it to the conversation
+        contact: {
+          firstName: 'John',
+          lastName: 'Doe',
+          email: 'customer@email.com',
+          phoneNumber: '+33612345644',
+          userId: '42424242',
+        },
+        // optional
+        // Override initial messages
+        initialMessages: [
+          'Hello Georges how are you doing today?',
+          'How can I help you ?',
+        ],
+        // optional
+        // Provided context will be appended to the Agent system prompt
+        context: "The user you are talking to is John. Start by Greeting him by his name.",
+      });
+    </script>
 </body>
 </html>
